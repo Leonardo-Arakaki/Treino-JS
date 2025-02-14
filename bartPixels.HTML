@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex 4</title>
+</head>
+<body>
+    <button onclick="esquerda()">Mover p/ Esquerda</button>
+    <button onclick="direita()">Mover p/ Direita</button>
+    Quantos pixels: <input type="number" id="input_pixels"><br><br>
+    <img src="https://i.ebayimg.com/images/g/BEYAAOSwb4JiLNMI/s-l1600.jpg" alt=""  style="width: 300px; margin-left: 0;" id="imagem">
+    
+</body>
+
+<script>
+
+    var bartMarginLeft = 0
+    var pixel = 0;
+
+    function esquerda() {
+        pixel = Number(input_pixels.value);
+        bartMarginLeft -= pixel
+        imagem.style.marginLeft = bartMarginLeft + 'px'
+    }
+    function direita() {
+        pixel = Number(input_pixels.value);
+        bartMarginLeft += pixel
+        imagem.style.marginLeft = bartMarginLeft + 'px'
+    }
+
+</script>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    Qual a sua força <input id="input_forca" type="number"><br>
+    Contra quem irá lutar <input id="input_inimigo" type="text">
+    Qual a força do seu inimigo <input id="input_forcaDoinimigo" type="number"><br>
+    <button onclick="ver()">Ver se é capaz</button><br>
+    <span id="span"></span>
+
+</body>
+
+</html>
+
+<script>
+
+    function ver() {
+        var forca = Number(input_forca.value)
+        var inimigo = input_inimigo.value
+        var forini = Number(input_forcaDoinimigo.value)
+
+        if(forca <= forini * 0.25) {
+            span.innerHTML = `Você não conseguira vencer esse combate contra ${inimigo}`
+        }
+
+        if(forca > forini * 0.25 || forca <= forini * 0.60) {
+            span.innerHTML = `Você tem grandes chances de ganhar esse combate contra ${inimigo}`
+        } 
+        
+        if(forca > forini * 0.60 ) {
+            span.innerHTML = `Você tem total capacidade de ganhar esse combate contra ${inimigo}`
+        }
+    }
+
+</script>

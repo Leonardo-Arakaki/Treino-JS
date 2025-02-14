@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Insira uma fruta <input type="text" id="input_fruta">
+    <button onclick="adicionar()">Adicionar fruta</button>
+    <button onclick="primeira()">Mostrar primeira fruta</button>
+    <button onclick="segunda()">Mostrar segunda fruta</button>
+    <button onclick="terceira()">Mostrar terceira fruta</button><br>
+    <span id="span"></span>
+</body>
+
+</html>
+
+<script>
+
+    var listaFrutas = []
+
+
+    function adicionar() {
+        listaFrutas.push(input_fruta.value)
+    }
+
+    function primeira() {
+        if(listaFrutas.length == 0) {
+            span.innerHTML = `Você ainda não adicionou frutas`
+        } else {
+            span.innerHTML += `Primeira fruta - ${listaFrutas[0]}<br>`
+        }
+    }
+
+    function segunda() {
+        if(listaFrutas.length < 2) {
+            span.innerHTML = `Você não adicionou duas frutas`
+        } else {
+            span.innerHTML += `Segunda fruta - ${listaFrutas[1]}<br>`
+        }
+    }
+
+    function terceira() {
+        if(listaFrutas.length < 3) {
+            span.innerHTML = `Você não adicionou tres frutas`
+        } else {
+            span.innerHTML += `Terceira fruta - ${listaFrutas[2]}`
+        }
+    }
+
+</script>

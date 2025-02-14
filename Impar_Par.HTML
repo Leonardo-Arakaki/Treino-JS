@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Insira um numero<input type="number" id="input_par">
+    <button onclick="mostrar()">Mostrar</button><br>
+    <span id="span"></span>
+
+</body>
+
+</html>
+
+<script>
+
+    function mostrar() {
+        var numero = 0
+        var usuario = Number(input_par.value)
+        span.innerHTML = null
+
+        while(numero <= usuario) {
+            span.innerHTML += `${numero}<br>`
+
+            numero += 2
+        }
+
+
+      
+    }
+
+</script>

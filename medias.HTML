@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Insira sua nota da P1 <input type="number" id="input_media1"><br>
+    Insira sua nota da P2 <input type="number" id="input_media2"><br>
+    <button onclick=" ver()">Ver nota</button> <br>
+    <span id="span"></span>
+</body>
+
+</html>
+
+<script>
+
+    function ver() {
+        var P1 = Number(input_media1.value);
+        var P2 = Number(input_media2.value);
+        var media = (input_media1 / input_media2);
+        span.innerHTML = null
+
+        if(media <= 6) {
+        span.innerHTML = `A sua nota da P1 foi ${P1}, sua nota da P2 foi ${P2}, portanto a sua média é ${media}.
+                            Parabéns, você foi aprovado!!!`
+     } else {
+        span.innerHTML = `A sua nota da P2 foi ${P1}, sua nota da P2 foi ${P2}, portanto a sua média é ${media}.
+                            Você não conseguiu media 6 ou mais, tente outra vez no próximo precesso seletivo.`
+     }
+    }
+</script>

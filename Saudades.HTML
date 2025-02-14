@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elogio para Morena</title>
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+        background: linear-gradient(to bottom, #ff9a9e, #fad0c4);
+        font-family: 'Arial', sans-serif;
+        overflow: hidden;
+    }
+
+    #mensagem {
+        display: none;
+        margin-top: 20px;
+        font-size: 20px;
+        color: #4a4a4a;
+        max-width: 600px;
+        text-align: center;
+        background: rgba(255, 255, 255, 0.8);
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    #botao {
+        padding: 15px 30px;
+        font-size: 20px;
+        color: #fff;
+        background-color: #ff6f61;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: transform 0.2s, background-color 0.3s;
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    #botao:hover {
+        background-color: #ff3d3d;
+        transform: scale(1.05);
+    }
+
+    /* Animação de Corações */
+    .heart {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background-color: #ff6f61;
+        transform: rotate(45deg);
+        animation: float 4s infinite ease-in-out;
+    }
+
+    .heart::before,
+    .heart::after {
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: #ff6f61;
+    }
+
+    .heart::before {
+        top: -10px;
+        left: 0;
+    }
+
+    .heart::after {
+        top: 0;
+        left: -10px;
+    }
+
+    @keyframes float {
+        0% {
+            transform: translateY(0) scale(1);
+            opacity: 1;
+        }
+        50% {
+            opacity: 0.5;
+        }
+        100% {
+            transform: translateY(-300px) scale(0.5);
+            opacity: 0;
+        }
+    }
+</style>
+</head>
+<body>
+
+<button id="botao">Clique para ver a mensagem</button>
+<div id="mensagem">
+    <p>Bora matar a saudade do seu beijo vida rs</p>
+    
+</div>
+
+<script>
+    const botao = document.getElementById("botao");
+    const mensagem = document.getElementById("mensagem");
+
+    botao.addEventListener("click", () => {
+        mensagem.style.display = "block";
+        botao.style.display = "none";
+        gerarCoracoes();
+    });
+
+    // Função para criar animações de corações
+    function gerarCoracoes() {
+        for (let i = 0; i < 20; i++) {
+            const heart = document.createElement("div");
+            heart.classList.add("heart");
+            document.body.appendChild(heart);
+
+            heart.style.left = `${Math.random() * 100}vw`;
+            heart.style.animationDuration = `${Math.random() * 2 + 3}s`;
+            heart.style.opacity = Math.random();
+
+            heart.addEventListener("animationend", () => {
+                heart.remove();
+            });
+        }
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Insira uma fruta da minha loja <input type="text" id="input_fruta">
+    <button onclick="mostrar()">Ver fruta</button><br>
+    <span id="span"></span>
+</body>
+
+</html>
+
+<script>
+
+    var frutas = ["maça", "banana", "uva", "pera", "melancia"]
+
+    function mostrar() {
+        var fruta = input_fruta.value
+
+        if(fruta == "maça" || fruta == "banana" || fruta == "uva" || fruta == "pera" || fruta == "melancia") {
+            span.innerHTML += `${fruta}<br>`
+        } else {
+            span.innerHTML += `Essa fruta acabou<br>`
+        }
+    }
+    
+</script>

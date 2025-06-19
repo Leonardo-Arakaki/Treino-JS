@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+    <h1>
+        <n>Análise de performance de alunos </n>
+    </h1><br><br>
+    Entre com o nome do aluno: <input type="text" id="input_aluno"><br>
+    Entre com a nota do aluno: <input type="text" id="input_nota"><br>
+    <button onclick="registrar()">Registrar</button>
+    <button onclick="analisar()">Analisar</button><br>
+    <div id="divUm"></div>
+    <div id="divDois"></div>                        
+
+</html>
+
+<script>
+
+    var listaNomes = []
+    var listaNotas = []
+
+    function registrar() {
+        listaNomes.push(input_aluno.value)
+        listaNotas.push(input_nota.value)
+        divUm.innerHTML = null
+
+        if(listaNotas[0] < 0 && listaNotas[0] > 10) {
+           divUm.innerHTML = "Não faça mais nada"
+        } else {
+            divUm.innerHTML = `${listaNomes}, ${listaNotas}`
+    }
+}
+
+    function analisar() {
+        divUm = null
+        
+    }
+
+</script>

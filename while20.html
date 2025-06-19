@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Quantidade de depositos <input id="input_number" type="number"><br>
+    valor do deposito <input id="input_number2" type="number"><br>
+    <button onclick="ver()">Acompanhar grana</button>
+    <div id="resul"></div>
+</body>
+</html>
+
+<script>
+
+    function ver() {
+        var mes = 1
+        var qtDep = Number(input_number.value)
+        var valor = Number(input_number2.value)
+        var valor2 = valor
+        resul.innerHTML = null
+
+        while(mes <= qtDep) {
+            resul.innerHTML += `${mes}° Mês: R$${valor}<br>`
+            mes += 1
+            valor += valor2
+            }
+    }
+
+</script>

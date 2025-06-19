@@ -42,7 +42,7 @@
         }
     
         function ultima() {
-            if(listaDestinos.length == 0) {
+            if(listaDestinos.length == 0 || listaDestinos.length < 4) {
                 span_resultado.innerHTML = "Ainda não viajou !!!"
             } else {
                 var ultimaviagem = listaDestinos[listaDestinos.length - 1]

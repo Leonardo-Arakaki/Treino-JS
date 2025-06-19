@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Digite o nome de seus filhos <input type="text" id="input_filho">
+    <button onclick="cadastrar()">Cadastrar</button>
+    <button onclick="atualizar()">Atualizar familia</button><br>
+    <span id="span_filhos"></span>
+</body>
+
+</html>
+
+<script>
+
+    var listaFilhos = []
+
+    function cadastrar() {
+        listaFilhos.push(input_filho.value)
+    }
+
+    function atualizar() {
+        var c = (listaFilhos.length)
+        var Part = (listaFilhos.length) * 3000
+        var Publi = (listaFilhos.length) * 1500
+
+        span_filhos.innerHTML = `Você tem ${c} filhos <br>  Seu custo mensal será aproximadamente R$${Part} se colocá-los em escola particular ou R$${Publi} se eles estudarem em escola pública 
+
+`
+    }
+
+</script>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="conta()">Contar</button>
+    <div id="div_while"></div>
+    
+</body>
+</html>
+
+<script>
+   
+    function conta() {
+        var numero = 1
+        div_while.innerHTML = null
+        while(numero <= 15) {
+        div_while.innerHTML += `${numero} <br>`
+        numero += 1
+        } 
+        
+    }
+
+</script>

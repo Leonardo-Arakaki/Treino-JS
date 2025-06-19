@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="input_frase" type="text"><br>
+    <button onclick="ver()">Ver</button>
+    <div id="mensagem"></div>
+
+</body>
+
+</html>
+
+<script>
+
+    function ver() {
+        //var contador = 0
+        var fra = input_frase.value
+
+        // while (contador < fra.length)  {
+        for (var contador = 0; contador < fra.length; contador++) {
+
+            mensagem.innerHTML += `${fra[contador]}<br>`
+            //  contador++
+
+        }
+       //}
+    }
+
+
+
+</script>

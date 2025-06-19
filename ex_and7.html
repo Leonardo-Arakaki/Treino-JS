@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 7</title>
+</head>
+<body>
+    Insira seu login <input id="input_login" type="text"><br>
+    <br>
+    Insira a sua senha <input id="input_senha" type="text"><br>
+    <br>
+    <button onclick="analisar()">Entrar</button>
+
+
+ 
+</body>
+
+<script>
+
+    function analisar() {
+        var log = input_login.value
+        var sen = input_senha.value
+
+        if (log == `SPTech` && sen == `digital`) {
+            alert(`Usuário autenticado com sucesso`)
+        } else {
+            alert(`Falha na autenticação`) 
+        }
+    }
+</script>
+
+</html>

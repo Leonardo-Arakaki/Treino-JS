@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex 11</title>
+</head>
+<body>
+    Quantas voltas um carro vai dar em uma corrida? <input id="input_voltas" type="number"><br>
+    <button onclick="ver()">Iniciar corrida</button>
+    <div id="mensagem"></div>
+</body>
+</html>
+
+<script>
+
+    function ver() {
+        var numero = 1
+        var usuario = Number(input_voltas.value)
+        mensagem.innerHTML = null
+        while(numero <= usuario) {
+            mensagem.innerHTML += `Carro dando a ${numero}ª volta<br>`
+            numero += 1
+        } if (numero > usuario) {
+            mensagem.innerHTML += `Corrida finalizada`
+        }
+    }
+
+</script>

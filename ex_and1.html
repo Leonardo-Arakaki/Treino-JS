@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 1</title>
+</head>
+<body>
+    Qual a temperatura? <input id="input_temp" type="number"><br>
+    <br>
+    <button onclick="analisar()">Ver situação</button>
+    </body>
+
+<script>
+
+    function analisar() {
+        var tempe = Number(input_temp.value)
+
+        if (tempe >= 21 && tempe <= 24) {
+            alert(`CONFORTAVEL`)
+        } else {
+            alert(`desconfortavel`)
+        }
+         
+       
+    }
+
+</script>
+
+    </html>

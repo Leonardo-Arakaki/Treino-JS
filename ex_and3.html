@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 3</title>
+</head>
+<body>
+    Crie um programa o qual: 
+
+   Insira a sua nota <input id="input_nota" type="number"><br>
+   <br>
+   <button onclick="avaliar()">Avaliar aluno</button>
+    
+    
+</body>
+
+<script>
+
+    function avaliar() {
+        var not = Number(input_nota.value)
+
+        if (not >= 0 && not <= 10) {
+            alert(`Nota valida!`)
+        } else {
+            alert(`Onde já se viu nota menor que 0 e maior que 10?!`)
+        }
+    }
+
+</script>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arakaki's machine</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-image: url('https://lojapalmeiras.vteximg.com.br/arquivos/ids/175887-1000-1000/774333-01--1-.png?v=638104510546070000'); 
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: red;
+        }
+
+        h1 {
+            color: red;
+        }
+
+        .converter {
+            margin: 5px;
+        }
+
+        input[type="number"] {
+            width: 200px;
+        }
+
+        div.result {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Arakaki's machine</h1>
+    <div class="converter">
+        <label for="numero">Número:</label>
+        <input type="number" id="numero">
+        <button onclick="converter()">Converter</button>
+    </div>
+    <div class="result">
+        <p>Decimal: <span id="decimal"></span></p>
+        <p>Octal: <span id="octal"></span></p>
+        <p>Hexadecimal: <span id="hexadecimal"></span></p>
+        <p>Binário: <span id="binario"></span></p>
+    </div>
+
+    <script>
+        function converter() {
+            const numeroDecimal = parseInt(document.getElementById("numero").value);
+            
+            if (!isNaN(numeroDecimal)) {
+                document.getElementById("decimal").textContent = numeroDecimal;
+                document.getElementById("octal").textContent = numeroDecimal.toString(8);
+                document.getElementById("hexadecimal").textContent = numeroDecimal.toString(16).toUpperCase();
+                document.getElementById("binario").textContent = numeroDecimal.toString(2);
+            } else {
+                alert("Por favor, insira um número válido.");
+            }
+        }
+    </script>
+</body>
+</html>

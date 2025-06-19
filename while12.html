@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Insira um numero <input id="input_number" type="number"><br>
+    Ate qual numero voce quer a tabuada <input id="input_number2" type="number"><br>
+    <button onclick="ver()">Ver tabuada</button>
+    <div id="mensagem"></div>
+</body>
+</html>
+
+<script>
+
+    function ver() {
+        var numero = 1
+        var usuario1 = Number(input_number.value)
+        var usuario2 = Number(input_number2.value)
+
+        mensagem.innerHTML = null
+        while(numero <= usuario2) {
+            mensagem.innerHTML += `${usuario1} X ${numero} = ${usuario1 * numero}<br>`
+            numero += 1
+        }
+    }
+
+</script>

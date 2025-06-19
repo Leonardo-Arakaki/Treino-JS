@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 8</title>
+</head>
+<body>
+    Insira seu login <input id="input_login" type="text"><br>
+    <br>
+    Insira a sua senha <input id="input_senha" type="text"><br>
+    <br>
+    Insira a senha de segurança <input id="input_seguranca" type="text"><br>
+    <br>
+    <button onclick="analisar()">Entrar</button>
+
+
+ 
+</body>
+
+<script>
+
+    function analisar() {
+        var log = input_login.value
+        var sen = input_senha.value
+        var aut = input_seguranca.value
+
+        if (log == `SPTech` && sen == `digital` && aut == `123`) {
+            alert(`Usuário autenticado com sucesso`)
+        } else {
+            alert(`Falha na autenticação`) 
+        }
+    }
+</script>
+
+</html>

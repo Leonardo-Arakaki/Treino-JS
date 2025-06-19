@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Filmes que mais gosta <input id="input_filme" type="text">
+    <button onclick="cadastrar()">Cadastrar favoritos</button>
+    <br>
+    <span id="span"></span>
+</body>
+
+</html>
+
+<script>
+
+    var Filmes = []
+
+    function cadastrar() {
+        Filmes.push(input_filme.value)
+
+        span.innerHTML = null
+
+        for (var p = 0; p < Filmes.length; p += 1)
+
+            if (p % 2 == 0) { 
+                span.innerHTML += `<span style= "color: blue">${Filmes[p]}</span><br>`
+            } else {
+                span.innerHTML += `<span style= "color: red">${Filmes[p]}</span><br>`
+            }
+
+
+    }
+</script>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+Digite qualquer número <input type="text" id="input_numero">
+<button onclick="analisar()">Analisar histórico</button><br>
+<span id="span"></span>
+
+</html>
+
+<script>
+
+    var listaNumeros = []
+
+    function analisar() {
+
+        listaNumeros.push(input_numero.value)
+        var maior = listaNumeros[0]
+        var menor = listaNumeros[0]
+        span.innerHTML = null
+
+        for (var p = 0; p < listaNumeros.length; p += 1) {
+
+
+            span.innerHTML += `${p + 1}º Número: ${listaNumeros[p]}<br>`
+
+            // if(maior < Number(listaNumeros[p] )) {
+            if (Number(listaNumeros[p]) > maior) {
+                maior = Number(listaNumeros[p])
+            }
+            if (menor > Number(listaNumeros[p]) || p == 0) {
+                menor = Number(listaNumeros[p])
+            }
+
+            // span.innerHTML += `1º Número: ${listaNumeros[0]}<br> 2º Número: ${listaNumeros[1]}<br> 3º Número: ${listaNumeros[2]}<br> 4º Número: ${listaNumeros[3]}<br><br>Maior número: ${maior}<br>Menor número${menor}`
+
+        }
+        span.innerHTML += `<br><br>Maior número: ${maior}<br>Menor número: ${menor}`
+
+    }
+
+</script>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>
+        <n>------Abertura do quiosque------</n>
+    </h1>
+    Agua engarrafada <input id="agua_engarrafada" type="number"><br>
+    <br>
+    Coco fechado <input id="coco_fechado" type="number"><br>
+    <br>
+    <button onclick="AbrirQuiosque()">Abrir quiosque</button>
+    <div id="barracaDoZe"></div>
+
+    <h2><n>
+        -----Estoque inicial-----
+    </n><br></h2>
+        Água engarrafada:
+        <br>
+        Coco fechado:
+     
+    <h3>
+        <n>---Registro de operações de venda---</n>
+    </h3>
+    Entre com a quantidade vendida <input id="input_ve" type="number"> informe o produto vendido: <input type="text"> <button onclick="ver()">Registrar venda</button> <button style="background-color: red;" onclick="encessar()">Encessar o Turno</button>
+
+</body>
+
+</html>
+
+<script>
+
+    function AbrirQuiosque() {
+        var contador = 1
+        var agua = Number(agua_engarrafada.value)
+        var coco = Number(coco_fechado.value)
+        barracaDoZe.innerHTML = null
+
+        if (agua < 100) {
+            barracaDoZe.innerHTML += `Com essa quantidade de Água engarrafada não dá para abrir o quiosque<br>`
+        } else {
+            barracaDoZe.innerHTML += `Engarrafe mais agua de coco<br>`
+        }
+        if (coco < 200) {
+            barracaDoZe.innerHTML += `Com essa quantidade de Coco fechado não dá para abrir o quiosque<br>`
+        } else {
+            barracaDoZe.innerHTML += `Compre mais cocos<br>`
+        }
+        
+    }
+     
+    function ver() {
+
+    }
+
+
+</script>

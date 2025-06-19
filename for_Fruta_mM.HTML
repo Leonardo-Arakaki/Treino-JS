@@ -11,6 +11,7 @@
     <button onclick="primeira()">Mostrar primeira fruta</button>
     <button onclick="segunda()">Mostrar segunda fruta</button>
     <button onclick="terceira()">Mostrar terceira fruta</button><br>
+    <button onclick="mostrar_todas()">Mostrar todas</button><br>
     <span id="span"></span>
 </body>
 
@@ -45,8 +46,14 @@
         if(listaFrutas.length < 3) {
             span.innerHTML = `Você não adicionou tres frutas`
         } else {
-            span.innerHTML += `Terceira fruta - ${listaFrutas[2]}`
+            span.innerHTML += `Terceira fruta - ${listaFrutas[2]}<br>`
         }
     }
+
+    function mostrar_todas() {
+        span.innerHTML += `${listaFrutas}<br>`
+    }
+
+
 
 </script>

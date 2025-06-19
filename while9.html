@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Insira um numero <input id="input_number" type="number"><br>
+    Digite uma frase <input id="input_frase" type="text"><br>
+    <button onclick="ver()">Papagaio</button>
+</body>
+</html>
+
+<script>
+
+    function ver() {
+        var numero = 1
+        var usuario = Number(input_number.value)
+        var frase = input_frase.value
+        while(numero <= usuario) {
+            alert(`${frase}`)
+            numero += 1
+        }
+    }
+
+</script>

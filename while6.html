@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Qual o nome da pessoa que você mais ama? <input id="input_nome" type="text"><br>
+    <br>
+    Quanto você ama essa pessoa? <input id="input_ama" type="number"><br>
+    <br>
+    <button onclick="ver()">Expressar amor</button>
+    <div id="mensagem"></div>
+</body>
+</html>
+
+<script>
+
+    function ver() {
+        var nome = input_nome.value
+        var ama = input_ama.value
+        var numero = 1
+        mensagem.innerHTML = null
+        while(numero <= 100) {
+            mensagem.innerHTML += `${numero} - ${nome}, eu te amo ${ama}<br>`
+        numero += 1
+        }    
+    }
+
+</script>

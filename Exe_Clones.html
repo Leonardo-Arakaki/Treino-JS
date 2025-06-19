@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clones</title>
+</head>
+
+<body>
+    <h1>Crie um exercicio que o usuário decida quantas imagens quer que apareça do naruto, e quantas imagens ele quer
+        em cada linha (terá que realizar a quebra de linha).</h1>
+
+        <h2>                 -------  Exercício  -------</h2>
+
+    Digite quantas imagens você quer que apareça: <input id="input_quant" type="number"><br>
+    Digite em qual imagem você quer a quebra de linha: <input id="input_quebra" type="number"><br>
+    <button onclick="verificar()">Verificar</button>
+    <button onclick="estatisticas()">Estatisticas</button><br>
+    <span id="span"></span>
+    <span id="spanDois"></span>
+
+    
+
+</body>
+
+<script>
+   
+
+    
+    function verificar() {
+        var contador = 1
+        var total = Number(input_quant.value) + 1
+        var quebra = Number(input_quebra.value)
+        span.innerHTML = null
+        
+        while(contador < total){
+        span.innerHTML += '<img src="https://storage.googleapis.com/pod_public/1300/229900.jpg" alt="" style="width: 100px;">  '
+      
+        
+         if(contador % quebra === 0) {
+            span.innerHTML +=  "<br>"
+        }
+        contador++
+    }
+      
+}
+
+function estatisticas() {
+    var total = Number(input_quant.value)
+    var quebra = Number(input_quebra.value)
+    spanDois.innerHTML = ""
+    spanDois.innerHTML += `<br>Números de clones: ${total}<br> Total de clones por linha: ${quebra}<br>`
+}
+
+</script>
+
+</html>
